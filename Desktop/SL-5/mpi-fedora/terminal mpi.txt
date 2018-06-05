@@ -1,0 +1,52 @@
+cmd1........................................
+pratik@Rathi-pc:~/Desktop/MPI-simran$ mpicc
+The program 'mpicc' can be found in the following packages:
+ * lam4-dev
+ * libmpich-dev
+ * libopenmpi-dev
+Try: sudo apt install <selected package>
+pratik@Rathi-pc:~/Desktop/MPI-simran$ sudo apt-get install libopenmpi-dev
+[sudo] password for pratik: 
+
+Do you want to continue? [Y/n] y
+pratik@Rathi-pc:~/Desktop/MPI-simran$ mpicc ./server.c -o server
+pratik@Rathi-pc:~/Desktop/MPI-simran$ mpicc ./server.c -o client
+pratik@Rathi-pc:~/Desktop/MPI-simran$ mpicc ./client.c -o client
+pratik@Rathi-pc:~/Desktop/MPI-simran$ mpirun -np 1 ./server
+Server available at port: 2031353856.0;tcp://192.168.43.250:57673+2031353857.0;tcp://192.168.43.250::300
+Received character: a
+Received character: b
+Received character: c
+
+Received String: abc
+
+Reversed string is : cba
+
+
+
+
+
+
+
+
+cmd2..........................................................................................
+pratik@Rathi-pc:~/Desktop/MPI-simran$ ./client '2031353856.0;tcp://192.168.43.250:57673+2031353857.0;tcp://192.168.43.250::300'
+--------------------------------------------------------------------------
+An attempt was made to send a message to a process whose
+address is unknown:
+
+  Sender:     [[30981,1],0]
+  From node:  Rathi-pc
+  Recipient:  [[30981,1],0]
+  On node:    Rathi-pc
+
+The message could not be delivered, and we are aborting.
+--------------------------------------------------------------------------
+pratik@Rathi-pc:~/Desktop/MPI-simran$ mpirun -np 1 ./client '2031353856.0;tcp://192.168.43.250:57673+2031353857.0;tcp://192.168.43.250::300'
+
+Enter the string :
+abc
+
+Reversed string is : cba
+
+pratik@Rathi-pc:~/Desktop/MPI-simran$ 

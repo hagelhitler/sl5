@@ -1,0 +1,66 @@
+cmd1--------------------------------------------------
+Microsoft Windows [Version 6.3.9600]
+(c) 2013 Microsoft Corporation. All rights reserved.
+
+C:\socket>set path=C:\Program Files (x86)\Java\jdk1.7.0_45\bin
+
+C:\socket>javac Server.java
+
+C:\socket>java Server
+
+
+cmd2----------------------------------------------------
+Microsoft Windows [Version 6.3.9600]
+(c) 2013 Microsoft Corporation. All rights reserved.
+
+C:\socket>set path=C:\Program Files (x86)\Java\jdk1.7.0_45\bin
+
+C:\socket>javac Client.java
+
+C:\socket>java Client
+Enter your Choice Followed by Input
+1: Compare
+2:Substring
+3:Concat
+4:Digit Addition
+5:Prime Number Check
+1 ab ab
+Equal
+Enter your Choice Followed by Input
+1: Compare
+2:Substring
+3:Concat
+4:Digit Addition
+5:Prime Number Check
+2 abc ab
+ Is Substring
+Enter your Choice Followed by Input
+1: Compare
+2:Substring
+3:Concat
+4:Digit Addition
+5:Prime Number Check
+3 ab xy
+abxy
+Enter your Choice Followed by Input
+1: Compare
+2:Substring
+3:Concat
+4:Digit Addition
+5:Prime Number Check
+4 12345
+ADDITION IS:15
+Enter your Choice Followed by Input
+1: Compare
+2:Substring
+3:Concat
+4:Digit Addition
+5:Prime Number Check
+5 13
+13It is a prime number
+Enter your Choice Followed by Input
+1: Compare
+2:Substring
+3:Concat
+4:Digit Addition
+5:Prime Number Check

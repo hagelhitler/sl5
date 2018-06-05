@@ -1,0 +1,38 @@
+
+Command prompt no. 1----------------------------------------------------------
+
+
+
+
+
+C:\Users\USER\Desktop\rmi>set path=C:\Program Files\Java\jdk1.8.0_66\bin
+
+C:\Users\USER\Desktop\rmi>javac *.java
+
+
+C:\Users\USER\Desktop\rmi>rmic ConcatC
+Warning: generation and use of skeletons and static stubs for JRMP
+is deprecated. Skeletons are unnecessary, and static stubs have
+been superseded by dynamically generated stubs. Users are
+encouraged to migrate away from using rmic to generate skeletons and static
+stubs. See the documentation for java.rmi.server.UnicastRemoteObject.
+
+C:\Users\USER\Desktop\rmi>start rmiregistry
+
+a blank commnd prompt will appear, minimize it--------------------------------------
+
+C:\Users\USER\Desktop\rmi>java server
+server started
+
+
+Open new command prompt--------------------------------------------------------------
+
+
+C:\Users\USER\Desktop\rmi>set path =C:\Program Files\Java\jdk1.8.0_66\bin
+
+C:\Users\USER\Desktop\rmi>java client
+concated string=aabb
+
+C:\Users\USER\Desktop\rmi>
+
+

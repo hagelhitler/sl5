@@ -1,0 +1,46 @@
+========================server terminal=========================
+
+
+[sachin123@localhost ass2]$ rpcgen -a -C fact.x
+[sachin123@localhost ass2]$ ll
+total 32
+-rw-rw-r--. 1 sachin123 sachin123  766 Jun  5 07:05 fact_client.c
+-rw-rw-r--. 1 sachin123 sachin123  536 Jun  5 07:05 fact_clnt.c
+-rw-rw-r--. 1 sachin123 sachin123  912 Jun  5 07:05 fact.h
+-rw-rw-r--. 1 sachin123 sachin123  309 Jun  5 07:05 fact_server.c
+-rw-rw-r--. 1 sachin123 sachin123 2135 Jun  5 07:05 fact_svc.c
+-rw-r--r--. 1 sachin123 sachin123  113 Mar 25 06:24 fact.x
+-rw-rw-r--. 1 sachin123 sachin123  233 Jun  5 07:05 fact_xdr.c
+-rw-rw-r--. 1 sachin123 sachin123 1073 Jun  5 07:05 Makefile.fact
+[sachin123@localhost ass2]$ gedit Makefile.fact
+^C
+[sachin123@localhost ass2]$ gedit fact_client.c
+^C
+[sachin123@localhost ass2]$ gedit fact_server.c
+^C
+[sachin123@localhost ass2]$ make -f Makefile.fact
+
+[sachin123@localhost ass2]$ make -f Makefile.fact
+cc -g -DRPC_SVC_FG   -c -o fact_clnt.o fact_clnt.c
+cc -g -DRPC_SVC_FG   -c -o fact_client.o fact_client.c
+cc -g -DRPC_SVC_FG   -c -o fact_xdr.o fact_xdr.c
+cc -g -DRPC_SVC_FG    -o fact_client  fact_clnt.o fact_client.o fact_xdr.o -lnsl 
+cc -g -DRPC_SVC_FG   -c -o fact_svc.o fact_svc.c
+cc -g -DRPC_SVC_FG   -c -o fact_server.o fact_server.c
+cc -g -DRPC_SVC_FG    -o fact_server  fact_svc.o fact_server.o fact_xdr.o -lnsl
+[sachin123@localhost ass2]$ ./fact_server
+
+==============================================================================
+
+
+
+========================client terminal================
+
+
+[sachin123@localhost ass2]$ ./fact_client
+usage: ./fact_client server_host
+[sachin123@localhost ass2]$ ./fact_client localhost
+enter the number4
+factotial 24
+
+===============================================================================
